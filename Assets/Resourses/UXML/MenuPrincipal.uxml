@@ -1,3 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Assets/MenuEventos.jpg?fileID=2800000&amp;guid=0f7239a2bdcedf740a0e6cf6bdc9cd83&amp;type=3#MenuEventos&apos;);" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Assets/ui_sprite_1358.png?fileID=2800000&amp;guid=87999c1376e3a6a43a1dc164ae463687&amp;type=3#ui_sprite_1358&apos;); -unity-background-image-tint-color: rgb(158, 162, 164);">
+        <ui:VisualElement style="flex-grow: 0; background-color: rgb(226, 226, 226); flex-shrink: 0; border-left-color: rgb(154, 154, 154); border-right-color: rgb(154, 154, 154); border-top-color: rgb(154, 154, 154); border-bottom-color: rgb(154, 154, 154); width: 370px; height: 637px; -unity-background-image-tint-color: rgb(255, 255, 255); border-left-width: 20px; border-right-width: 20px; border-top-width: 40px; border-bottom-width: 20px; border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;" />
+    </ui:VisualElement>
 </ui:UXML>

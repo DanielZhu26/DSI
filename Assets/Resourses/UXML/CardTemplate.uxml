@@ -18,121 +18,25 @@
             <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; background-image: none;">
                 <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/ArchersCard.png?fileID=-1128150779&amp;guid=57cc94e55e6b1d44a87ddae4fe5d6873&amp;type=3#ArchersCard_0&apos;);" />
                 <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="2" display-tooltip-when-elided="true" style="font-size: 28px;" />
+                    <ui:Label tabindex="-1" text="2" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
                 <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/ArrowsCard.png?fileID=-2073330362&amp;guid=cc48aadee7f82d04293250e30f67dc09&amp;type=3#ArrowsCard_0&apos;);" />
                 <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
+                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
                 <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/BabyDragonCard.png?fileID=993285884&amp;guid=d81a8e8c06d80194288734b658fd3459&amp;type=3#BabyDragonCard_0&apos;);" />
                 <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" style="font-size: 28px;" />
+                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
                 <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/BalloonCard.png?fileID=1487870682&amp;guid=e2a5673b2d8326847b5f283924903a13&amp;type=3#BalloonCard_0&apos;);" />
                 <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/DarkPrinceCard.png?fileID=-177942506&amp;guid=22368a81131cb144e86ac5fb3b64de57&amp;type=3#DarkPrinceCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/FireballCard.png?fileID=-68297952&amp;guid=3f28493d381951b4dad751e315b14526&amp;type=3#FireballCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/HogRiderCard.png?fileID=-801323766&amp;guid=569ad87b5f43e514399cb32b0d672d7f&amp;type=3#HogRiderCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/IceSpiritCard.png?fileID=351365856&amp;guid=f04d882346a22954e9f7109d2c76e3d7&amp;type=3#IceSpiritCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="2" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/IceWizardCard.png?fileID=-1096279991&amp;guid=36f6d7b26bab13f43805cbc317ec8a8d&amp;type=3#IceWizardCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/InfernoTowerCard.png?fileID=1287312867&amp;guid=9f1db3ddc3c7ef04e94c5b472f888e4d&amp;type=3#InfernoTowerCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/KnightCard.png?fileID=176627178&amp;guid=44c5ab11df53dac41b60b7182c08d37a&amp;type=3#KnightCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/MegaMinionCard.png?fileID=-1109211028&amp;guid=d709755202ff13d49a2baf110c6acdba&amp;type=3#MegaMinionCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/MinionHordeCard.png?fileID=502333814&amp;guid=ae601da9a0728f84da2068a1cfe1ac62&amp;type=3#MinionHordeCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/MinionsCard.png?fileID=141476663&amp;guid=38258708390df5c4e9883c61c0fb95e8&amp;type=3#MinionsCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/MiniPEKKACard.png?fileID=441429210&amp;guid=7360d0ef590d1034fb1612d42efa088e&amp;type=3#MiniPEKKACard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/MusketeerCard.png?fileID=1432138599&amp;guid=1a72dc053a9dbf047a76c6aa1b371ecd&amp;type=3#MusketeerCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/PEKKACard.png?fileID=-1736239739&amp;guid=17640bddcaae1584bb9d3ad68783ed92&amp;type=3#PEKKACard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="6" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/PrinceCard.png?fileID=392342829&amp;guid=df07b90910bc12341bd5be9ccd007640&amp;type=3#PrinceCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/SkeletonArmyCard.png?fileID=-1685751557&amp;guid=983a08b4d0676b446bba8082f245c889&amp;type=3#SkeletonArmyCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" style="font-size: 28px;" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
-                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/SkeletonsCard.png?fileID=-1133004911&amp;guid=02e37927d4e3b6546970c165fcafa5d8&amp;type=3#SkeletonsCard_0&apos;);" />
-                <ui:VisualElement name="elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-                    <ui:Label tabindex="-1" text="1" display-tooltip-when-elided="true" style="font-size: 28px;" />
+                    <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

@@ -448,8 +448,8 @@ MonoBehaviour:
   uiDoc1: {fileID: 0}
   uiDoc2: {fileID: 9197481963319205126, guid: f92830a578e097e4ba563bef86908524, type: 3}
   uiDoc3: {fileID: 9197481963319205126, guid: 6258df63219ff4740bd4586437de27f4, type: 3}
-  uiDoc4: {fileID: 0}
-  uiDoc5: {fileID: 0}
+  uiDoc4: {fileID: 9197481963319205126, guid: 9682aa7a093873648bc760f186787e63, type: 3}
+  uiDoc5: {fileID: 9197481963319205126, guid: 953ae78a13f87e448854275897534296, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

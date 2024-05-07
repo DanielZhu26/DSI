@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 1117835916}
   - component: {fileID: 1117835915}
   - component: {fileID: 1117835917}
+  - component: {fileID: 1117835918}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -445,11 +446,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e9a34acc25114469749a422dd09524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiDoc1: {fileID: 0}
+  uiDoc1: {fileID: 9197481963319205126, guid: e75d59e4e78d46d46aafb57dd0d45e73, type: 3}
   uiDoc2: {fileID: 9197481963319205126, guid: f92830a578e097e4ba563bef86908524, type: 3}
   uiDoc3: {fileID: 9197481963319205126, guid: 6258df63219ff4740bd4586437de27f4, type: 3}
   uiDoc4: {fileID: 9197481963319205126, guid: 9682aa7a093873648bc760f186787e63, type: 3}
   uiDoc5: {fileID: 9197481963319205126, guid: 953ae78a13f87e448854275897534296, type: 3}
+--- !u!114 &1117835918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117835914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1766d7a69a7ece41aba72117f6aa242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

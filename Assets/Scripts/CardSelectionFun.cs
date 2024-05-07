@@ -70,10 +70,6 @@ public class CardSelectionFun : MonoBehaviour
 
             elixirLabel.text = elem.elixir;
 
-            Debug.Log(Resources.Load<Texture2D>(Path.GetFileNameWithoutExtension(elem.image)));
-
-            Debug.Log(Path.GetFileNameWithoutExtension(elem.image));
-
             contador++;
         });
     }
@@ -155,7 +151,7 @@ public class CardSelectionFun : MonoBehaviour
 
             elixirLabelDesk.text = elixirLabel.text;
 
-            imageDesk.style.backgroundImage = imageSelecction.resolvedStyle.backgroundImage.texture;
+            imageDesk.style.backgroundImage = imageSelecction.resolvedStyle.backgroundImage;
 
         }
         

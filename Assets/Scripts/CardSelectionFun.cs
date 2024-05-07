@@ -20,7 +20,6 @@ public class CardSelectionFun : MonoBehaviour
 
     VisualElement desk;
 
-    List<InfoCard> list_infoCard = new List<InfoCard>();
     private void OnEnable()
     {
 
@@ -46,31 +45,49 @@ public class CardSelectionFun : MonoBehaviour
 
         botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
 
-        InicializarCards();
+        //InicializarCards();
 
     }
 
-    void InicializarCards()
-    {
-        list_infoCard.ForEach(elem =>
-        {
+    //void InicializarCards()
+    //{
+    //    list_infoCard.ForEach(elem =>
+    //    {
 
-            VisualTreeAsset plantilla = Resources.Load<VisualTreeAsset>("Card");
-            VisualElement cardPlantilla = plantilla.Instantiate();
+    //        VisualTreeAsset plantilla = Resources.Load<VisualTreeAsset>("Card");
+    //        VisualElement cardPlantilla = plantilla.Instantiate();
 
-            desk.Add(cardPlantilla);
-            card_borde_negro();
-            card_borde_blanco(cardPlantilla);
+    //        desk.Add(cardPlantilla);
+    //        card_borde_negro();
+    //        card_borde_blanco(cardPlantilla);
 
-            InfoCard cardInfo = new InfoCard(elem.elixir, elem.image);
-            Card tarjeta = new Card(cardPlantilla, cardInfo);
-            selectCardInfo = cardPlantilla;
-        });
-    }
+    //        InfoCard cardInfo = new InfoCard(elem.elixir, elem.image);
+    //        Card tarjeta = new Card(cardPlantilla, cardInfo);
+    //        selectCardInfo = cardPlantilla;
+    //    });
+    //}
 
 
     void guardarInfo(ClickEvent evt)
     {
+
+        List<InfoCard> list_infoCard = new List<InfoCard>();
+
+        List<VisualElement> list_desk = new();
+        list_desk.AddRange(desk.Children().ToList());
+
+
+        list_desk.ForEach(elem => {
+
+            VisualElement elemImage = elem.Q<VisualElement>("Card");
+
+            Label elixirLabel = elem.Q<Label>("amount");
+
+            string pathTexture = (string)AssetDatabase.GetAssetPath(elemImage.resolvedStyle.backgroundImage.texture);
+
+            list_infoCard.Add(new InfoCard(elixirLabel.text, pathTexture));     
+
+        });
 
         string listaToJson = JSONHelperInfoCard.ToJson(list_infoCard, true);
 

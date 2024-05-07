@@ -42,6 +42,30 @@
                     <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
+            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
+                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card CardSelection" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/DarkPrinceCard.png?fileID=2800000&amp;guid=22368a81131cb144e86ac5fb3b64de57&amp;type=3#DarkPrinceCard&apos;); border-left-width: 15px; border-right-width: 15px; border-top-width: 15px; border-bottom-width: 15px;" />
+                <ui:VisualElement name="Elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Label tabindex="-1" text="5" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
+                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card CardSelection" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/FireballCard.png?fileID=2800000&amp;guid=3f28493d381951b4dad751e315b14526&amp;type=3#FireballCard&apos;); border-left-width: 15px; border-right-width: 15px; border-top-width: 15px; border-bottom-width: 15px;" />
+                <ui:VisualElement name="Elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
+                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card CardSelection" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/HogRiderCard.png?fileID=2800000&amp;guid=569ad87b5f43e514399cb32b0d672d7f&amp;type=3#HogRiderCard&apos;); border-left-width: 15px; border-right-width: 15px; border-top-width: 15px; border-bottom-width: 15px;" />
+                <ui:VisualElement name="Elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Label tabindex="-1" text="4" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CardModel" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: 135px; height: 180px; flex-shrink: 0; align-items: flex-start; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px;">
+                <ui:Button display-tooltip-when-elided="true" name="Card" class="Card CardSelection" style="-unity-background-scale-mode: stretch-to-fill; background-image: url(&apos;project://database/Assets/Assets/Cartas/KnightCard.png?fileID=2800000&amp;guid=44c5ab11df53dac41b60b7182c08d37a&amp;type=3#KnightCard&apos;); border-left-width: 15px; border-right-width: 15px; border-top-width: 15px; border-bottom-width: 15px;" />
+                <ui:VisualElement name="Elixir" class="Elixir" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:Label tabindex="-1" text="3" display-tooltip-when-elided="true" name="amount" style="font-size: 28px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="SelectScreen" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0.47); flex-shrink: 0; width: 925px; height: 150px; -unity-background-scale-mode: stretch-to-fill;">
             <ui:Instance template="BarraInferior" name="BarraInferior" style="height: 154px;" />

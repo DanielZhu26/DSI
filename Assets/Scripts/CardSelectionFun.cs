@@ -109,15 +109,11 @@ public class CardSelectionFun : MonoBehaviour
 
             VisualElement imageDesk = selectCardInfo.Q<VisualElement>("Card");
 
-            Debug.Log(elixirLabel);
-
-            Debug.Log(selectCardInfo);
-
-            Debug.Log(elixirLabelDesk);
+            VisualElement imageSelecction = selected.Q<VisualElement>("Card");
 
             elixirLabelDesk.text = elixirLabel.text;
 
-            imageDesk.style.backgroundImage = selected.resolvedStyle.backgroundImage;
+            imageDesk.style.backgroundImage = imageSelecction.resolvedStyle.backgroundImage.texture;
 
         }
         

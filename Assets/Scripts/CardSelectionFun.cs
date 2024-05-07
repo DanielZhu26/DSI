@@ -100,7 +100,27 @@ public class CardSelectionFun : MonoBehaviour
     void ChangeCard(ClickEvent evt, VisualElement selected)
     {
 
-        if(selectCardInfo != null)
+        bool repeatCard = false;
+
+        VisualElement imageSelecction = selected.Q<VisualElement>("Card");
+
+        List<VisualElement> list_desk = new();
+        list_desk.AddRange(desk.Children().ToList());
+
+
+        list_desk.ForEach(elem => {
+
+            VisualElement elemImage = elem.Q<VisualElement>("Card");
+
+            if (elemImage.resolvedStyle.backgroundImage == imageSelecction.resolvedStyle.backgroundImage)
+            {
+                repeatCard = true;
+            }
+
+        });
+
+
+        if (selectCardInfo != null && !repeatCard)
         {
 
             Label elixirLabel = selected.Q<Label>("amount");
@@ -108,8 +128,6 @@ public class CardSelectionFun : MonoBehaviour
             Label elixirLabelDesk = selectCardInfo.Q<Label>("amount");
 
             VisualElement imageDesk = selectCardInfo.Q<VisualElement>("Card");
-
-            VisualElement imageSelecction = selected.Q<VisualElement>("Card");
 
             elixirLabelDesk.text = elixirLabel.text;
 

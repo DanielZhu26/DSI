@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class botonAjustes : MonoBehaviour
 {
-    private void OnEnable()
+    public void startComponent()
     {
         UIDocument uiDoc = GetComponent<UIDocument>();
         VisualElement rootVe = uiDoc.rootVisualElement;
@@ -21,7 +21,12 @@ public class botonAjustes : MonoBehaviour
         VisualElement boton4 = rootVe.Q<Button>("botonChat");
         VisualElement boton5 = rootVe.Q<Button>("botonLanguage");
         VisualElement boton6 = rootVe.Q<Button>("botonFace");
+        VisualElement boton7 = rootVe.Q<VisualElement>("BotonCerrar");
 
+        boton7.RegisterCallback<MouseUpEvent>(ev =>
+        {
+            GetComponent<BarraInferior>().comeBackToMainScreen();
+        });
 
         boton1.RegisterCallback<MouseUpEvent>(ev =>
         {
@@ -30,7 +35,7 @@ public class botonAjustes : MonoBehaviour
             if (buttonVe.style.backgroundColor == Color.red)
             {
                 buttonVe.style.backgroundColor = Color.green;
-                rootVe.Q<Button>("botonMusic").text = "ON"; 
+                rootVe.Q<Button>("botonMusic").text = "ON";
             }
             else
             {
@@ -89,12 +94,12 @@ public class botonAjustes : MonoBehaviour
             VisualElement buttonVe = (ev.target as VisualElement);
             if (rootVe.Q<Button>("botonLanguage").text == "ENGLISH")
             {
-             
+
                 rootVe.Q<Button>("botonLanguage").text = "SPANISH";
             }
             else
             {
-           
+
                 rootVe.Q<Button>("botonLanguage").text = "ENGLISH";
             }
         });

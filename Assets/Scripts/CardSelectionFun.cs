@@ -20,9 +20,8 @@ public class CardSelectionFun : MonoBehaviour
 
     VisualElement desk;
 
-    private void OnEnable()
+    public void startComponent()
     {
-
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
         desk = root.Q("Desk");
@@ -54,6 +53,7 @@ public class CardSelectionFun : MonoBehaviour
         List<InfoCard> datos = new List<InfoCard>();
 
         string path = Path.Combine(Application.persistentDataPath, "desk_info");
+        Debug.Log(path);
         string individuosInfo = File.ReadAllText(path);
 
         datos = JSONHelperInfoCard.FromJSON<InfoCard>(individuosInfo);

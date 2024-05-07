@@ -10,6 +10,13 @@ public class BarraInferior : MonoBehaviour
     [SerializeField] VisualTreeAsset uiDoc3;
     [SerializeField] VisualTreeAsset uiDoc4;
     [SerializeField] VisualTreeAsset uiDoc5;
+    [SerializeField] VisualTreeAsset uiDoc6;
+
+    public void comeBackToMainScreen()
+    {
+        GetComponent<UIDocument>().visualTreeAsset = uiDoc3;
+        startComponent();
+    }
 
     void startComponent()
     {
@@ -24,20 +31,22 @@ public class BarraInferior : MonoBehaviour
         VisualElement boton3 = rootVe.Q<Button>("Boton3");
         VisualElement boton4 = rootVe.Q<Button>("Boton4");
         VisualElement boton5 = rootVe.Q<Button>("Boton5");
+        VisualElement boton6 = new VisualElement();
+        if (GetComponent<UIDocument>().visualTreeAsset == uiDoc3)
+            boton6 = rootVe.Q<Button>("Boton6");
 
         boton1.RegisterCallback<MouseUpEvent>(ev =>
         {
             Debug.Log("boton1");
             GetComponent<UIDocument>().visualTreeAsset = uiDoc1;
             startComponent();
-            
-
         });
         boton2.RegisterCallback<MouseUpEvent>(ev =>
         {
             Debug.Log("boton2");
             GetComponent<UIDocument>().visualTreeAsset = uiDoc2;
             startComponent();
+            GetComponent<CardSelectionFun>().startComponent();
         });
         boton3.RegisterCallback<MouseUpEvent>(ev =>
         {
@@ -57,6 +66,16 @@ public class BarraInferior : MonoBehaviour
             GetComponent<UIDocument>().visualTreeAsset = uiDoc5;
             startComponent();
         });
+
+        if (GetComponent<UIDocument>().visualTreeAsset == uiDoc3)
+        {
+            boton6.RegisterCallback<MouseUpEvent>(ev =>
+            {
+                Debug.Log("boton6");
+                GetComponent<UIDocument>().visualTreeAsset = uiDoc6;
+                GetComponent<botonAjustes>().startComponent();
+            });
+        }
     }
 
     private void OnEnable()

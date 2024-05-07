@@ -45,27 +45,38 @@ public class CardSelectionFun : MonoBehaviour
 
         botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
 
-        //InicializarCards();
+        InicializarCards();
 
     }
 
-    //void InicializarCards()
-    //{
-    //    list_infoCard.ForEach(elem =>
-    //    {
+    void InicializarCards()
+    {
+        List<InfoCard> datos = new List<InfoCard>();
 
-    //        VisualTreeAsset plantilla = Resources.Load<VisualTreeAsset>("Card");
-    //        VisualElement cardPlantilla = plantilla.Instantiate();
+        string path = Path.Combine(Application.persistentDataPath, "desk_info");
+        string individuosInfo = File.ReadAllText(path);
 
-    //        desk.Add(cardPlantilla);
-    //        card_borde_negro();
-    //        card_borde_blanco(cardPlantilla);
+        datos = JSONHelperInfoCard.FromJSON<InfoCard>(individuosInfo);
 
-    //        InfoCard cardInfo = new InfoCard(elem.elixir, elem.image);
-    //        Card tarjeta = new Card(cardPlantilla, cardInfo);
-    //        selectCardInfo = cardPlantilla;
-    //    });
-    //}
+        int contador = 0;
+
+        datos.ForEach(elem => {
+
+            VisualElement deskImage = desk[contador].Q<VisualElement>("Card");
+
+            Label elixirLabel = desk[contador].Q<Label>("amount");
+
+            deskImage.style.backgroundImage = Resources.Load<Texture2D>(Path.GetFileNameWithoutExtension(elem.image));
+
+            elixirLabel.text = elem.elixir;
+
+            Debug.Log(Resources.Load<Texture2D>(Path.GetFileNameWithoutExtension(elem.image)));
+
+            Debug.Log(Path.GetFileNameWithoutExtension(elem.image));
+
+            contador++;
+        });
+    }
 
 
     void guardarInfo(ClickEvent evt)

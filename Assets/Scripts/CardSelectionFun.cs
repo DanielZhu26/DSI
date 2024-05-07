@@ -6,11 +6,13 @@ using UnityEngine.UIElements;
 using System;
 using System.IO;
 using UnityEditor;
+using static JSONHelper;
+
 public class CardSelectionFun : MonoBehaviour
 {
     VisualElement selectCardInfo;
 
-    //VisualElement botonGuardar;
+    VisualElement botonGuardar;
 
     string imageCard;
 
@@ -18,7 +20,6 @@ public class CardSelectionFun : MonoBehaviour
 
     VisualElement desk;
 
-    List<InfoCard> list_infoCard = new List<InfoCard>();
     private void OnEnable()
     {
 
@@ -26,7 +27,7 @@ public class CardSelectionFun : MonoBehaviour
 
         desk = root.Q("Desk");
 
-        //botonGuardar = root.Q<Button>("BotonGuardar");
+        botonGuardar = root.Q<Button>("BotonGuardar");
 
         desk.RegisterCallback<ClickEvent>(selectionCard);
 
@@ -42,55 +43,67 @@ public class CardSelectionFun : MonoBehaviour
 
         });
 
-        //botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
+        botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
 
-        InicializarCards();
+        //InicializarCards();
 
     }
 
-    void InicializarCards()
-    {
-        list_infoCard.ForEach(elem =>
-        {
-
-            VisualTreeAsset plantilla = Resources.Load<VisualTreeAsset>("Card");
-            VisualElement cardPlantilla = plantilla.Instantiate();
-
-            desk.Add(cardPlantilla);
-            card_borde_negro();
-            card_borde_blanco(cardPlantilla);
-
-            InfoCard cardInfo = new InfoCard(elem.elixir, elem.image);
-            Card tarjeta = new Card(cardPlantilla, cardInfo);
-            selectCardInfo = cardPlantilla;
-        });
-    }
-
-
-    //void guardarInfo(ClickEvent evt)
+    //void InicializarCards()
     //{
+    //    list_infoCard.ForEach(elem =>
+    //    {
 
-    //    string listaToJson = JSONHelperIndividuo.ToJson(list_individuo, true);
+    //        VisualTreeAsset plantilla = Resources.Load<VisualTreeAsset>("Card");
+    //        VisualElement cardPlantilla = plantilla.Instantiate();
 
-    //    string path = Path.Combine(Application.persistentDataPath, "lista_individuos");
+    //        desk.Add(cardPlantilla);
+    //        card_borde_negro();
+    //        card_borde_blanco(cardPlantilla);
 
-    //    File.WriteAllText(path, listaToJson);
-
-    //    Debug.Log(path);
-
+    //        InfoCard cardInfo = new InfoCard(elem.elixir, elem.image);
+    //        Card tarjeta = new Card(cardPlantilla, cardInfo);
+    //        selectCardInfo = cardPlantilla;
+    //    });
     //}
+
+
+    void guardarInfo(ClickEvent evt)
+    {
+
+        List<InfoCard> list_infoCard = new List<InfoCard>();
+
+        List<VisualElement> list_desk = new();
+        list_desk.AddRange(desk.Children().ToList());
+
+
+        list_desk.ForEach(elem => {
+
+            VisualElement elemImage = elem.Q<VisualElement>("Card");
+
+            Label elixirLabel = elem.Q<Label>("amount");
+
+            string pathTexture = (string)AssetDatabase.GetAssetPath(elemImage.resolvedStyle.backgroundImage.texture);
+
+            list_infoCard.Add(new InfoCard(elixirLabel.text, pathTexture));     
+
+        });
+
+        string listaToJson = JSONHelperInfoCard.ToJson(list_infoCard, true);
+
+        string path = Path.Combine(Application.persistentDataPath, "desk_info");
+
+        File.WriteAllText(path, listaToJson);
+
+        Debug.Log(path);
+
+    }
 
     void selectionCard(ClickEvent evt)
     {
         VisualElement card = evt.target as VisualElement;
 
-        Debug.Log(card);
-
-        Debug.Log(card.userData);
-
         selectCardInfo = card;
-
-        Debug.Log(selectCardInfo);
 
         card_borde_negro();
         card_borde_blanco(card);

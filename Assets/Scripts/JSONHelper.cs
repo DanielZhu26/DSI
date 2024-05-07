@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class JSONHelper : MonoBehaviour
 {
     public class JSONHelperInfoCard

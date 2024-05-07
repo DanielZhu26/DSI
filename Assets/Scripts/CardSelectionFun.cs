@@ -6,11 +6,13 @@ using UnityEngine.UIElements;
 using System;
 using System.IO;
 using UnityEditor;
+using static JSONHelper;
+
 public class CardSelectionFun : MonoBehaviour
 {
     VisualElement selectCardInfo;
 
-    //VisualElement botonGuardar;
+    VisualElement botonGuardar;
 
     string imageCard;
 
@@ -26,7 +28,7 @@ public class CardSelectionFun : MonoBehaviour
 
         desk = root.Q("Desk");
 
-        //botonGuardar = root.Q<Button>("BotonGuardar");
+        botonGuardar = root.Q<Button>("BotonGuardar");
 
         desk.RegisterCallback<ClickEvent>(selectionCard);
 
@@ -42,7 +44,7 @@ public class CardSelectionFun : MonoBehaviour
 
         });
 
-        //botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
+        botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
 
         InicializarCards();
 
@@ -67,30 +69,24 @@ public class CardSelectionFun : MonoBehaviour
     }
 
 
-    //void guardarInfo(ClickEvent evt)
-    //{
+    void guardarInfo(ClickEvent evt)
+    {
 
-    //    string listaToJson = JSONHelperIndividuo.ToJson(list_individuo, true);
+        string listaToJson = JSONHelperInfoCard.ToJson(list_infoCard, true);
 
-    //    string path = Path.Combine(Application.persistentDataPath, "lista_individuos");
+        string path = Path.Combine(Application.persistentDataPath, "desk_info");
 
-    //    File.WriteAllText(path, listaToJson);
+        File.WriteAllText(path, listaToJson);
 
-    //    Debug.Log(path);
+        Debug.Log(path);
 
-    //}
+    }
 
     void selectionCard(ClickEvent evt)
     {
         VisualElement card = evt.target as VisualElement;
 
-        Debug.Log(card);
-
-        Debug.Log(card.userData);
-
         selectCardInfo = card;
-
-        Debug.Log(selectCardInfo);
 
         card_borde_negro();
         card_borde_blanco(card);

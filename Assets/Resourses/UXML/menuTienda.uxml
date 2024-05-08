@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="BarraInferior" src="project://database/Assets/Resourses/UXML/BarraInferior.uxml?fileID=9197481963319205126&amp;guid=28f70de33d46ff6419ba3400018e85ce&amp;type=3#BarraInferior" />
-    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Assets/premadeMenus/MenuCompras.png?fileID=2800000&amp;guid=b08b72fd089f25c47b85d0d546b798e3&amp;type=3#MenuCompras&apos;);">
+    <ui:VisualElement name="Background" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/Assets/premadeMenus/MenuCompras.png?fileID=2800000&amp;guid=b08b72fd089f25c47b85d0d546b798e3&amp;type=3#MenuCompras&apos;); flex-shrink: 0; width: 922px; height: 2048px;">
         <ui:Instance template="BarraInferior" name="BarraInferior" style="height: 10%; position: relative; top: 90%;" />
     </ui:VisualElement>
 </ui:UXML>

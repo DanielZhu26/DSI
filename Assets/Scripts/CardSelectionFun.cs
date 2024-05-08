@@ -14,17 +14,47 @@ public class CardSelectionFun : MonoBehaviour
 
     VisualElement botonGuardar;
 
-    string imageCard;
-
     VisualElement CardSelection;
 
     VisualElement desk;
+
+    //private void OnEnable()
+    //{
+    //    VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+
+    //    desk = root.Q("Desk");
+
+    //    Debug.Log(desk);
+
+    //    botonGuardar = root.Q<Button>("BotonGuardar");
+
+    //    desk.RegisterCallback<ClickEvent>(selectionCard);
+
+    //    CardSelection = root.Q("CardSelection");
+
+    //    List<VisualElement> list_ve_h = new();
+    //    list_ve_h.AddRange(CardSelection.Children().ToList());
+
+
+    //    list_ve_h.ForEach(elem => {
+
+    //        elem.RegisterCallback<ClickEvent, VisualElement>(ChangeCard, elem);
+
+    //    });
+
+    //    botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
+
+    //    InicializarCards();
+
+    //}
 
     public void startComponent()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
         desk = root.Q("Desk");
+
+        Debug.Log(desk);
 
         botonGuardar = root.Q<Button>("BotonGuardar");
 
@@ -54,24 +84,32 @@ public class CardSelectionFun : MonoBehaviour
 
         string path = Path.Combine(Application.persistentDataPath, "desk_info");
         Debug.Log(path);
-        string individuosInfo = File.ReadAllText(path);
 
-        datos = JSONHelperInfoCard.FromJSON<InfoCard>(individuosInfo);
+        if(File.Exists(path))
+        {
+            string individuosInfo = File.ReadAllText(path);
 
-        int contador = 0;
+            datos = JSONHelperInfoCard.FromJSON<InfoCard>(individuosInfo);
 
-        datos.ForEach(elem => {
+            int contador = 0;
 
-            VisualElement deskImage = desk[contador].Q<VisualElement>("Card");
+            datos.ForEach(elem => {
 
-            Label elixirLabel = desk[contador].Q<Label>("amount");
+                VisualElement deskImage = desk[contador].Q<VisualElement>("Card");
 
-            deskImage.style.backgroundImage = Resources.Load<Texture2D>(Path.GetFileNameWithoutExtension(elem.image));
+                Label elixirLabel = desk[contador].Q<Label>("amount");
 
-            elixirLabel.text = elem.elixir;
+                deskImage.style.backgroundImage = Resources.Load<Texture2D>(Path.GetFileNameWithoutExtension(elem.image));
 
-            contador++;
-        });
+                Debug.Log(elem.image);
+                Debug.Log(Resources.Load<Texture2D>(Path.GetFileNameWithoutExtension(elem.image)));
+
+                elixirLabel.text = elem.elixir;
+
+                contador++;
+            });
+        } 
+        
     }
 
 
@@ -152,6 +190,8 @@ public class CardSelectionFun : MonoBehaviour
             elixirLabelDesk.text = elixirLabel.text;
 
             imageDesk.style.backgroundImage = imageSelecction.resolvedStyle.backgroundImage;
+
+            Debug.Log(imageSelecction.resolvedStyle.backgroundImage.texture);
 
         }
         

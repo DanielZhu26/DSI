@@ -40,6 +40,7 @@ public class BarraInferior : MonoBehaviour
             Debug.Log("boton1");
             GetComponent<UIDocument>().visualTreeAsset = uiDoc1;
             startComponent();
+            GetComponent<Textoenriquezido>().startComponent();
         });
         boton2.RegisterCallback<MouseUpEvent>(ev =>
         {

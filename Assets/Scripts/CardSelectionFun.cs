@@ -18,35 +18,6 @@ public class CardSelectionFun : MonoBehaviour
 
     VisualElement desk;
 
-    //private void OnEnable()
-    //{
-    //    VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-
-    //    desk = root.Q("Desk");
-
-    //    Debug.Log(desk);
-
-    //    botonGuardar = root.Q<Button>("BotonGuardar");
-
-    //    desk.RegisterCallback<ClickEvent>(selectionCard);
-
-    //    CardSelection = root.Q("CardSelection");
-
-    //    List<VisualElement> list_ve_h = new();
-    //    list_ve_h.AddRange(CardSelection.Children().ToList());
-
-
-    //    list_ve_h.ForEach(elem => {
-
-    //        elem.RegisterCallback<ClickEvent, VisualElement>(ChangeCard, elem);
-
-    //    });
-
-    //    botonGuardar.RegisterCallback<ClickEvent>(guardarInfo);
-
-    //    InicializarCards();
-
-    //}
 
     public void startComponent()
     {
